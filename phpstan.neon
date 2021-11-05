@@ -1,0 +1,8 @@
+parameters:
+    level: 5
+    paths:
+        - src
+    ignoreErrors:
+        -
+            message: '#Constant [A-Z_]+ not found.#'
+            path: src
