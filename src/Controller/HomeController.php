@@ -8,6 +8,8 @@ use Twig\Error\SyntaxError;
 
 class HomeController extends AbstractController
 {
+    private array $css = ["settings", "navbar", "home"];
+
     /**
      * Display home page
      *
@@ -18,6 +20,9 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Home/index.html.twig');
+        $css = $this->css;
+        return $this->twig->render('Home/index.html.twig', [
+            'css' => $css
+        ]);
     }
 }

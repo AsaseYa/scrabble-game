@@ -8,6 +8,8 @@ use Twig\Loader\FilesystemLoader;
 
 abstract class AbstractController
 {
+    protected const CSS = ["settings", "navbar"];
+
     protected Environment $twig;
 
     /**

@@ -1,0 +1,59 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    {% include 'Components/_style.html.twig' %}
+{% endblock %}
+
+{% block navbar %}
+    {% include 'Components/_navbar.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    <div id="phpVarWords" style="display: none;">
+        {{ wordsGame }}
+    </div>
+    <div id="phpVarLetters" style="display: none;">
+        {{ lettersGame }}
+    </div>
+
+    <div class="firstWords"></div>
+    <div class="secondWords"></div>
+    <div class="thirdWords"></div>
+    <div class="fourthWords"></div>
+    <div class="fifthWords"></div>
+    <div class="sixth-words"></div>
+
+    <form class="word-form" action="">
+        <label for="wordInput" class="word-label">
+            Write your word here
+            <input id="wordInput" class="word-input" type="text" value="">
+            <input type="submit" style="display: none;">
+        </label>
+    </form>
+
+
+    <div class="lettersContainer">
+        {# JS import #}
+    </div>
+    {#
+    <div class="four">
+        c
+    </div>
+    <div class="five">
+        d
+    </div>
+    <div class="six">
+        e
+    </div>
+    <div class="seven">
+        f
+    </div> #}
+{% endblock %}
+
+
+
+{% block javascript %}
+<script type="text/javascript" src="assets/javascript/gameRandomLetters.js"></script>
+<script type="text/javascript" src="assets/javascript/gameWords.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+{% endblock %}

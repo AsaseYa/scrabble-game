@@ -1,0 +1,133 @@
+.main-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+    grid-template-rows: 4rem 2rem repeat(6, 1fr) auto auto 2rem;
+    grid-template-areas:
+            "navbar navbar navbar navbar navbar navbar navbar navbar"
+            ". . . . . . . ."
+            ". firstWords secondWords thirdWords fourthWords fifthWords sixthWords ."
+            ". firstWords secondWords thirdWords fourthWords fifthWords sixthWords ."
+            ". firstWords secondWords thirdWords fourthWords fifthWords sixthWords ."
+            ". firstWords secondWords thirdWords fourthWords fifthWords sixthWords ."
+            ". firstWords secondWords thirdWords fourthWords fifthWords sixthWords ."
+            ". firstWords secondWords thirdWords fourthWords fifthWords sixthWords ."
+            ". input input input input input input ."
+            ". letters letters letters letters letters letters ."
+            ". . . . . . . .";
+    justify-items: center;
+}
+
+
+.firstWords,
+.secondWords,
+.thirdWords,
+.fourthWords,
+.fifthWords,
+.sixth-words {
+    height: 100%;
+    width: 100%;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstWords {
+    grid-area: firstWords;
+}
+
+.secondWords {
+    grid-area: secondWords;
+}
+
+.thirdWords {
+    grid-area: thirdWords;
+}
+
+.fourthWords {
+    grid-area: fourthWords;
+}
+
+.fifthWords {
+    grid-area: fifthWords;
+}
+
+.sixth-words {
+    grid-area: sixthWords;
+}
+
+.word-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.whiteSquareTotal {
+    background-color: var(--black);
+    color: var(--white);
+    height: 1.5rem;
+    width: auto;
+    border-radius: 3px;
+    text-align: center;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    box-shadow: var(--black) 1px 1px 1px;
+}
+
+.whiteSquareFont {
+    font-size: 100%;
+}
+
+.whiteSquare {
+    background-color: var(--white);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 3px;
+    text-align: center;
+    margin: 0.1rem;
+    box-shadow: var(--black) 1px 1px 1px;
+    font-size: 0;
+}
+
+.whiteSquareFont {
+    font-size: 100%;
+}
+
+.word-form {
+    grid-area: input;
+    width: 100%;
+}
+
+.word-label {
+
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    text-align: center;
+}
+
+.word-input {
+    margin: 0.5rem;
+    height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.lettersContainer {
+    grid-area: letters;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.bigWhiteSquare {
+    background-color: var(--white);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3px;
+    text-align: center;
+    margin: 0.1rem;
+    box-shadow: var(--black) 1px 1px 1px;
+    font-size: 2.5rem;
+}
