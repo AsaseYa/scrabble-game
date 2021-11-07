@@ -22,14 +22,14 @@ formSubmit.onsubmit = function (event) {
                 if (word.textContent === playerInput) {
                     word.childNodes.forEach((whiteSquare) => {
                         /*whiteSquare.style.fontSize = "100%"; <= autre solution*/
-                        whiteSquare.classList.toggle("whiteSquareFont")
+                        whiteSquare.classList.toggle("white-square-font")
                     })
                 }
             });
         }
     })
 
-
+    formSubmitInput.value = '';
 }
 
 
