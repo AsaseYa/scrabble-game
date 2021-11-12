@@ -12,7 +12,7 @@ let fourWordsContainer = document.querySelector('.four-words-container');
 let fiveWordsContainer = document.querySelector('.five-words-container');
 let sixWordsContainer = document.querySelector('.six-words-container');
 let sevenWordsContainer = document.querySelector('.seven-words-container');
-let whiteSquareTotal = document.querySelectorAll('.white-square-total');
+let whiteSquareTotalSecond = document.querySelectorAll('.white-square-total-second');
 
 //display white square and total
 let counterWhiteSquareTotal = -1;
@@ -27,7 +27,7 @@ wordsByLetter.forEach((words) => {
         wordContainer.innerHTML = wordContainer.innerHTML.replaceAll(',', '');
         if (words[0] === word) {
             counterWhiteSquareTotal += 1;
-            whiteSquareTotal[counterWhiteSquareTotal].textContent = word.length + " letters 0/" + words.length;
+            whiteSquareTotalSecond[counterWhiteSquareTotal].textContent = "/" + words.length;
         }
         placeInDiv(wordContainer);
     });

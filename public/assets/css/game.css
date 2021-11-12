@@ -73,9 +73,11 @@
     height: 1.5rem;
     width: auto;
     border-radius: 3px;
-    text-align: center;
     margin: 0.1rem 0.1rem 1rem 0.1rem;
     box-shadow: var(--black) 1px 1px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .white-square {
@@ -145,3 +147,4 @@
 /*    box-shadow: var(--black) 1px 1px 1px;*/
     font-size: 2.5rem;
 }
+/*https://codepen.io/32bitkid/pen/NPEgbx*/
