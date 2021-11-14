@@ -16,38 +16,54 @@
         {{ lettersGame }}
     </div>
 
-    <div class="firstWords"></div>
-    <div class="secondWords"></div>
-    <div class="thirdWords"></div>
-    <div class="fourthWords"></div>
-    <div class="fifthWords"></div>
-    <div class="sixth-words"></div>
+    <div class="two-words-container">
+        <div class="white-square-total">
+            <div class="white-square-total-first">0</div>
+            <div class="white-square-total-second"></div>
+        </div>
+    </div>
+    <div class="three-words-container">
+        <div class="white-square-total">
+            <div class="white-square-total-first">0</div>
+            <div class="white-square-total-second"></div>
+        </div>
+    </div>
+    <div class="four-words-container">
+        <div class="white-square-total">
+            <div class="white-square-total-first">0</div>
+            <div class="white-square-total-second"></div>
+        </div>
+    </div>
+    <div class="five-words-container">
+        <div class="white-square-total">
+            <div class="white-square-total-first">0</div>
+            <div class="white-square-total-second"></div>
+        </div>
+    </div>
+    <div class="six-words-container">
+        <div class="white-square-total">
+            <div class="white-square-total-first">0</div>
+            <div class="white-square-total-second"></div>
+        </div>
+    </div>
+    <div class="seven-words-container">
+        <div class="white-square-total">
+            <div class="white-square-total-first">0</div>
+            <div class="white-square-total-second"></div>
+        </div>
+    </div>
 
-    <form class="word-form" action="">
+    <form class="word-form" autocomplete="off" action="">
         <label for="wordInput" class="word-label">
-            Write your word here
-            <input id="wordInput" class="word-input" type="text" value="">
+            <input id="wordInput" class="word-input" type="text" value="" autofocus>
             <input type="submit" style="display: none;">
         </label>
     </form>
 
-
     <div class="lettersContainer">
         {# JS import #}
+        <div class="timer"></div>
     </div>
-    {#
-    <div class="four">
-        c
-    </div>
-    <div class="five">
-        d
-    </div>
-    <div class="six">
-        e
-    </div>
-    <div class="seven">
-        f
-    </div> #}
 {% endblock %}
 
 
@@ -56,4 +72,5 @@
 <script type="text/javascript" src="assets/javascript/gameRandomLetters.js"></script>
 <script type="text/javascript" src="assets/javascript/gameWords.js"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
+<script type="text/javascript" src="assets/javascript/timer.js"></script>
 {% endblock %}

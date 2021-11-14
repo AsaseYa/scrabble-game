@@ -2,7 +2,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 2rem repeat(6, 1fr) 2rem;
-    grid-template-rows: 4rem 2rem repeat(6, 1fr) auto auto 2rem;
+    grid-template-rows: 4rem 2rem repeat(6, auto) auto auto 2rem;
     grid-template-areas:
             "navbar navbar navbar navbar navbar navbar navbar navbar"
             ". . . . . . . ."
@@ -19,40 +19,43 @@
 }
 
 
-.firstWords,
-.secondWords,
-.thirdWords,
-.fourthWords,
-.fifthWords,
-.sixth-words {
+.two-words-container,
+.three-words-container,
+.four-words-container,
+.five-words-container,
+.six-words-container,
+.seven-words-container {
     height: 100%;
     width: 100%;
     padding: 0.2rem;
     display: flex;
     flex-direction: column;
+    max-height: 65vh;
+    min-height: 65vh;
+    overflow-y: auto;
 }
 
-.firstWords {
+.two-words-container {
     grid-area: firstWords;
 }
 
-.secondWords {
+.three-words-container {
     grid-area: secondWords;
 }
 
-.thirdWords {
+.four-words-container {
     grid-area: thirdWords;
 }
 
-.fourthWords {
+.five-words-container {
     grid-area: fourthWords;
 }
 
-.fifthWords {
+.six-words-container {
     grid-area: fifthWords;
 }
 
-.sixth-words {
+.seven-words-container {
     grid-area: sixthWords;
 }
 
@@ -63,25 +66,24 @@
     justify-content: center;
 }
 
-.whiteSquareTotal {
+.white-square-total {
     background-color: var(--black);
     color: var(--white);
+    padding: 0.5rem;
     height: 1.5rem;
     width: auto;
     border-radius: 3px;
-    text-align: center;
-    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    margin: 0.1rem 0.1rem 1rem 0.1rem;
     box-shadow: var(--black) 1px 1px 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.whiteSquareFont {
-    font-size: 100%;
-}
-
-.whiteSquare {
+.white-square {
     background-color: var(--white);
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
     border-radius: 3px;
     text-align: center;
     margin: 0.1rem;
@@ -89,7 +91,7 @@
     font-size: 0;
 }
 
-.whiteSquareFont {
+.white-square-font {
     font-size: 100%;
 }
 
@@ -99,7 +101,6 @@
 }
 
 .word-label {
-
     display: flex;
     flex-direction: column;
     margin: 2rem;
@@ -117,17 +118,33 @@
     grid-area: letters;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
 }
 
-.bigWhiteSquare {
-    background-color: var(--white);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 3px;
+.big-tiles {
+    /*background-color: var(--white);*/
+    background-image: url("../images/tile-texture.png");
+    background-color: var(--tile-color);
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 1.125mm 0.75mm -0.5mm rgba(0, 0, 0, 0.4);
+    border-style: solid;
+    border-top-width: 0.75mm;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1.125mm;
+    border-top-color: rgba(255, 255, 255, 0.45);
+    border-left-color: rgba(255, 255, 255, 0.25);
+    border-right-color: rgba(0, 0, 0, 0.15);
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.75mm;
+    height: 4rem;
+    width: 4rem;
+/*    border-radius: 3px;*/
     text-align: center;
     margin: 0.1rem;
-    box-shadow: var(--black) 1px 1px 1px;
+/*    box-shadow: var(--black) 1px 1px 1px;*/
     font-size: 2.5rem;
 }
+/*https://codepen.io/32bitkid/pen/NPEgbx*/

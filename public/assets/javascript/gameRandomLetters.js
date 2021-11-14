@@ -4,9 +4,9 @@ const randomLetters = JSON.parse(document.querySelector('#phpVarLetters').textCo
 //var for DOM manipulation
 let lettersContainer = document.querySelector('.lettersContainer');
 
-randomLetters.map((e) =>{
+randomLetters.map((e) => {
     let letter = document.createElement('div');
-    letter.classList.add('bigWhiteSquare');
-    letter.innerHTML = e;
+    letter.classList.add('big-tiles');
+    letter.innerHTML = "<span>" + e + "</span>";
     lettersContainer.appendChild(letter);
 })
